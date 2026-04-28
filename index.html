@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Función Derivada</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: 3rem;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #fff;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.25);
+      padding: 15px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #222;
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 30px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      color: #ff4757;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-left: 8px solid #1dd1a1;
+      border-radius: 15px;
+      margin-top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .formula {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 20px 0;
+      font-weight: bold;
+      color: #3742fa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: white;
+      font-weight: bold;
+    }
+
+    button {
+      background: #ff4757;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #e84118;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>La Función Derivada</h1>
+    <p>Aprende de forma fácil y visual qué es una derivada y cómo se aplica</p>
+  </header>
+
+  <nav>
+    <a href="#quees">¿Qué es?</a>
+    <a href="#reglas">Reglas</a>
+    <a href="#ejemplo">Ejemplo</a>
+    <a href="#aplicaciones">Aplicaciones</a>
+  </nav>
+
+  <section id="quees">
+    <h2>¿Qué es una Derivada?</h2>
+    <p>
+      La derivada es una herramienta del cálculo que nos permite medir cómo cambia una función respecto a una variable.
+      Es decir, nos ayuda a conocer la rapidez con la que ocurre un cambio.
+    </p>
+    <div class="formula">
+      f'(x) = lim (h→0) [f(x+h) - f(x)] / h
+    </div>
+  </section>
+
+  <section id="reglas">
+    <h2>Reglas Básicas de Derivación</h2>
+
+    <div class="card">
+      <h3>Regla de la Potencia</h3>
+      <p>Si f(x) = xⁿ entonces f'(x) = n·xⁿ⁻¹</p>
+    </div>
+
+    <div class="card">
+      <h3>Regla de la Suma</h3>
+      <p>La derivada de una suma es la suma de las derivadas.</p>
+    </div>
+
+    <div class="card">
+      <h3>Regla del Producto</h3>
+      <p>(u·v)' = u'·v + u·v'</p>
+    </div>
+  </section>
+
+  <section id="ejemplo">
+    <h2>Ejemplo Práctico</h2>
+    <p>Sea la función:</p>
+    <div class="formula">f(x) = x² + 3x + 2</div>
+    <p>Su derivada será:</p>
+    <div class="formula">f'(x) = 2x + 3</div>
+
+    <button onclick="mostrarMensaje()">Ver explicación</button>
+    <p id="mensaje"></p>
+  </section>
+
+  <section id="aplicaciones">
+    <h2>Aplicaciones de la Derivada</h2>
+    <p>
+      Las derivadas se utilizan en física, economía, ingeniería, medicina y muchas otras áreas.
+      Sirven para calcular velocidad, aceleración, optimización de recursos y predicción de cambios.
+    </p>
+  </section>
+
+  <footer>
+    Sitio educativo sobre la Función Derivada | Matemáticas Interactivas
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById("mensaje").innerHTML =
+        "La derivada de x² es 2x, la de 3x es 3 y la constante 2 desaparece porque su derivada es 0.";
+    }
+  </script>
+
+</body>
+</html>
